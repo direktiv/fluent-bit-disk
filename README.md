@@ -1,15 +1,15 @@
 # fluent-bit-disk
 
-#### Using the plugin:
+## Using the plugin:
 
 This plugin for [fluent-bit](https://github.com/fluent/fluent-bit) reports disk partition usage.
 
 The name of the plugin is 'vdisk' and the name of the partition can be defined in the INPUT
 section of the plugin.
 
-##### Example configuration:
+### Example configuration
 
-```toml
+```sh
 [SERVICE]
         Daemon off
         Flush 1
@@ -34,7 +34,7 @@ This will produce output like the following:
 [0] vdisk.0: [1598916699.022796699, {"bytes_total"=>3361153024, "bytes_free"=>3358642176, "bytes_pct"=>0.074702, "inodes_total"=>4101586, "inodes_free"=>4102966, "inodes_pct"=>0.033634}]
 ```
 
-#### Building the plugin:
+## Building the plugin
 
 This plugin is using the example plugin setup for [fluentbit plugins](https://github.com/fluent/fluent-bit-plugin).
 
