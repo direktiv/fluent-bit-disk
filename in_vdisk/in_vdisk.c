@@ -1,5 +1,10 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
+/**
+ * SPDX-License-Identifier: Apache-2.0
+ * Copyright 2020 vorteil.io Pty Ltd
+ */
+
 /*  Fluent Bit
  *  ==========
  *  Copyright (C) 2019      The Fluent Bit Authors
@@ -186,4 +191,3 @@ struct flb_input_plugin in_vdisk_plugin = {.name = "vdisk",
                                            .cb_pause = in_vdisk_pause,
                                            .cb_resume = in_vdisk_resume,
                                            .cb_exit = in_vdisk_exit};
-
