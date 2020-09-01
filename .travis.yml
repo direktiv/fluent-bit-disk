@@ -4,11 +4,10 @@ language: C
 
 compiler: gcc
 
-before_install:
-  - sudo apt-get -y install cmake
-  - mkdir build
-
 script:
   - git clone --single-branch --branch=v1.5.4 https://github.com/fluent/fluent-bit.git --depth 1
   - cd fluent-bit && make build && cd build && cmake .. && make
-  - ls && cd ../../build && ls && cmake -DPLUGIN_NAME=in_vdisk -DFLB_SOURCE=build/fluent-bit .. && make 
+  - ls
+  - cd ../../build
+  - ls
+  - pwd && cmake -DPLUGIN_NAME=in_vdisk -DFLB_SOURCE=build/fluent-bit .. && make
