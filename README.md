@@ -1,6 +1,6 @@
 # fluent-bit-disk
 
-## Using the plugin:
+## Using the plugin
 
 This plugin for [fluent-bit](https://github.com/fluent/fluent-bit) reports disk partition usage.
 
