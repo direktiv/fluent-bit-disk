@@ -38,7 +38,7 @@ This will produce output like the following:
 
 ## Building the plugin
 
-This plugin is using the example plugin setup for [fluentbit plugins](https://github.com/fluent/fluent-bit-plugin).
+This plugin uses the example plugin setup for [fluentbit plugins](https://github.com/fluent/fluent-bit-plugin).
 
 ```sh
 cmake -DPLUGIN_NAME=in_vdisk -DFLB_SOURCE=~/path/to/fluentbit  ..
