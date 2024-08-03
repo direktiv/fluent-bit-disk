@@ -1,5 +1,3 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1f419c28498848e5b8bbb6f3c0f1b0ef)](https://www.codacy.com/gh/vorteil/fluent-bit-disk?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vorteil/fluent-bit-disk&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/vorteil/fluent-bit-disk.svg?branch=master)](https://travis-ci.org/vorteil/fluent-bit-disk)
-
 # fluent-bit-disk
 
 ## Using the plugin

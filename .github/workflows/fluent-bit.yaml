@@ -1,0 +1,29 @@
+name: Fluent Bit build with disk plugin
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker build
+      run: docker build --build-arg VERSION=3.1.4 --tag fluent-bit:3.1.4-with-disk .
+    - name: docker run
+      run: |
+        docker run -d --name fluent-test -v"$(pwd)"/example-fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro -v"$(pwd)"/logs:/fluent-bit/log fluent-bit:3.1.4-with-disk
+        sleep 5
+        docker stop fluent-test
+        docker logs fluent-test
+        if [ -f logs/vdisk.0 ]; then echo "vdisk file output found :-)"; else echo "*** Test fail - vdisk output not found :("; exit 1; fi
+        cat logs/vdisk.0
+        if grep 'bytes_total' logs/vdisk.0 > /dev/null; then echo "bytes_total found in output log :-)"; else echo "*** Test fail - vdisk output not found :("; exit 1 ; fi
